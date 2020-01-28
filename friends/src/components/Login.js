@@ -23,15 +23,17 @@ class Login extends Component {
     axios
       .post("http://localhost:5000/api/login", this.state.credentials)
       .then(res => {
-        console.log(res);
+        console.log(res)
+        localStorage.setItem('token', res.data.payload);
+        this.props.history.push('/protected')
       })
-      .catch(err => console.log(err));
+      .catch(err => console.log("Error", err));
   };
 
   render() {
     return (
       <div className="form-container">
-        <form>
+        <form onSubmit={this.login}>
           <input
             type="text"
             name="username"
