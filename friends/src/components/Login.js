@@ -23,9 +23,9 @@ class Login extends Component {
     axios
       .post("http://localhost:5000/api/login", this.state.credentials)
       .then(res => {
-        console.log(res)
-        localStorage.setItem('token', res.data.payload);
-        this.props.history.push('/protected')
+        console.log(res);
+        localStorage.setItem("token", res.data.payload);
+        this.props.history.push("/protected");
       })
       .catch(err => console.log("Error", err));
   };
@@ -48,6 +48,7 @@ class Login extends Component {
             placeholder="Password"
             value={this.state.credentials.password}
             onChange={this.handleChange}
+            required
           />
           <button>Log in</button>
         </form>
