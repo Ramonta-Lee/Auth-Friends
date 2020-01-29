@@ -40,11 +40,19 @@
 
 .card {
   background: #fdd365;
-  border-radius: 2px;
+  border-radius: 5px;
   display: inline-block;
   height: 300px;
   margin: 1rem;
   position: relative;
   width: 300px;
   box-shadow: 10px 5px 5px #61d4b3;
+}
+
+.card > h1 {
+  color: #fb8d62;
+}
+
+.addFriend-form {
+  margin-bottom: 2%;
 }

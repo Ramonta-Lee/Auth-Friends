@@ -30,37 +30,40 @@ export const AddNewFriendForm = props => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <label htmlFor="name">Name:</label>
-      <input
-        type="text"
-        name="name"
-        placeholder="name"
-        value={newFriend.name}
-        onChange={handleChange}
-        required
-      />
-      <label htmlFor="age">Age:</label>
+    <div>
+      <h2>Add Friend Form:</h2>
+      <form className="addFriend-form" onSubmit={handleSubmit}>
+        <label htmlFor="name">Name:</label>
+        <input
+          type="text"
+          name="name"
+          placeholder="name"
+          value={newFriend.name}
+          onChange={handleChange}
+          required
+        />
+        <label htmlFor="age">Age:</label>
 
-      <input
-        type="text"
-        name="age"
-        placeholder="Age"
-        value={newFriend.age}
-        onChange={handleChange}
-        required
-      />
-      <label htmlFor="email">Email:</label>
+        <input
+          type="text"
+          name="age"
+          placeholder="Age"
+          value={newFriend.age}
+          onChange={handleChange}
+          required
+        />
+        <label htmlFor="email">Email:</label>
 
-      <input
-        type="text"
-        name="email"
-        placeholder="Email"
-        value={newFriend.email}
-        onChange={handleChange}
-        required
-      />
-      <button type="submit">Add Friend</button>
-    </form>
+        <input
+          type="text"
+          name="email"
+          placeholder="Email"
+          value={newFriend.email}
+          onChange={handleChange}
+          required
+        />
+        <button type="submit">Add Friend</button>
+      </form>
+    </div>
   );
 };
