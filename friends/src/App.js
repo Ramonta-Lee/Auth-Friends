@@ -7,6 +7,7 @@ import PrivateRoute from "./components/PrivateRoute";
 import { FriendsList } from "./components/FriendsList";
 
 function App() {
+  
   const handleLogout = () => {
     localStorage.removeItem("token");
   };
@@ -15,7 +16,7 @@ function App() {
     <Router>
       <div className="App">
         <h1>BESTEES!!</h1>
-        <nav>
+        <nav className="nav">
           <Link to="/login">Login</Link>
           <Link to="/protected">Protected Page</Link>
           <Link to="/login" onClick={handleLogout}>

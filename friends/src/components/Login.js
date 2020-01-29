@@ -33,7 +33,9 @@ class Login extends Component {
   render() {
     return (
       <div className="form-container">
-        <form onSubmit={this.login}>
+       <h2>Login Form:</h2>
+        <form className="login-form" onSubmit={this.login}>
+          <label htmlFor="username ">Username:</label>
           <input
             type="text"
             name="username"
@@ -42,6 +44,8 @@ class Login extends Component {
             onChange={this.handleChange}
             required
           />
+          <label htmlFor="password">Password:</label>
+
           <input
             type="password"
             name="password"

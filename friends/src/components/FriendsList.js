@@ -12,6 +12,7 @@ export const FriendsList = () => {
     email: ""
   });
 
+  // this variable gets the friends data from the api
   const updateFriendsList = () => {
     axiosWithAuth()
       .get("/friends")
